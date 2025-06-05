@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Argumentaire - Support de Présentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        .page {
+            padding: 30px;
+            min-height: 297mm;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 18px;
+            margin: 15px 0;
+        }
+        
+        .objection-card {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .objection-title {
+            color: #856404;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .counter-args {
+            background: #d1edff;
+            border: 2px solid #0066cc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .intro-card {
+            background: #f8f9ff;
+            border: 1px solid #667eea;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .intro-title {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .calculation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+        
+        .calculation-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .calculation-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .calculation-table tr:hover {
+            background: #f5f7ff;
+        }
+        
+        .bullet-point {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .bullet-point::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .check-point {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .check-point::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .example-box {
+            background: #e8f5e8;
+            border: 1px solid #28a745;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+        
+        .key-phrase {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1: Introduction IA pour Novices -->
+        <div class="page">
+            <div class="header">
+                <h1>🤖 L'IA DANS LE SECTEUR SANTÉ</h1>
+                <p class="subtitle">Guide d'introduction pour comprendre les enjeux et opportunités</p>
+            </div>
+            
+            <div class="section">
+                <h2>💡 Qu'est-ce que l'IA peut apporter à votre établissement ?</h2>
+                
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <div class="intro-title">🕐 Gagner du Temps</div>
+                        <p>L'IA automatise les tâches répétitives comme la saisie de données, la planification, les rappels automatiques. Vos équipes se concentrent sur le soin aux patients.</p>
+                    </div>
+                    
+                    <div class="intro-card">
+                        <div class="intro-title">❌ Réduire les Erreurs</div>
+                        <p>Fini les double-réservations, les oublis de RDV, les erreurs de facturation. L'IA vérifie et valide automatiquement pour éviter les dysfonctionnements.</p>
+                    </div>
+                    
+                    <div class="intro-card">
+                        <div class="intro-title">💰 Économiser l'Argent</div>
+                        <p>Moins de gaspillage, optimisation des ressources, réduction des heures supplémentaires. L'IA optimise vos coûts opérationnels.</p>
+                    </div>
+                    
+                    <div class="intro-card">
+                        <div class="intro-title">😊 Améliorer la Satisfaction</div>
+                        <p>Patients plus satisfaits (RDV faciles, moins d'attente) et équipes moins stressées (tâches automatisées, meilleure organisation).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔄 Pourquoi Changer vos Méthodes de Travail ?</h2>
+                
+                <div class="highlight-box">
+                    <h3>📊 La Réalité du Terrain :</h3>
+                    <div class="bullet-point">Vos équipes perdent 3h/jour sur 8h en tâches administratives répétitives</div>
+                    <div class="bullet-point">25% des réservations/plannings nécessitent une correction manuelle</div>
+                    <div class="bullet-point">Les erreurs de communication coûtent du temps et de l'argent</div>
+                    <div class="bullet-point">La concurrence se digitalise pendant que vous restez manuel</div>
+                </div>
+                
+                <div class="section">
+                    <h3>🚀 Les Changements Concrets :</h3>
+                    
+                    <div class="example-box">
+                        <strong>AVANT :</strong> Secrétaire note RDV à la main → risque d'erreur → rappel manuel → patient mécontent<br>
+                        <strong>APRÈS :</strong> Patient prend RDV en ligne → confirmation automatique → rappel SMS → satisfaction +30%
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>AVANT :</strong> Planning restaurant manuscrit → erreurs de commande → gaspillage alimentaire<br>
+                        <strong>APRÈS :</strong> Réservation numérique → commandes précises → réduction gaspillage -15%
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 Pourquoi Maintenant ?</h2>
+                
+                <div class="check-point"><strong>Clariane investit massivement</strong> dans l'innovation (Digital Factory, partenariat Doctolib)</div>
+                <div class="check-point"><strong>Nouvelles réglementations</strong> exigent plus de traçabilité et d'efficacité</div>
+                <div class="check-point"><strong>Concurrence active :</strong> Orpea, DomusVi se digitalisent rapidement</div>
+                <div class="check-point"><strong>Post-COVID :</strong> patients habitués aux services numériques</div>
+                <div class="check-point"><strong>Pénurie de personnel :</strong> faire plus avec moins grâce à l'automatisation</div>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ Le Coût de l'Inaction :</strong><br>
+                Ne pas se digitaliser aujourd'hui = prendre 3 ans de retard sur la concurrence + risquer des amendes réglementaires + perdre des patients qui vont vers des structures plus modernes.
+            </div>
+        </div>
+
+        <!-- Page 2: Explication Diagnostic Détaillé -->
+        <div class="page">
+            <div class="header">
+                <h1>📊 DIAGNOSTIC DÉTAILLÉ</h1>
+                <p class="subtitle">Comment j'ai calculé les chiffres clés</p>
+            </div>
+            
+            <div class="section">
+                <h2>🕐 40% - Temps perdu en tâches administratives</h2>
+                
+                <div class="highlight-box">
+                    <h3>Méthodologie d'observation (18 mois) :</h3>
+                    <table class="calculation-table">
+                        <thead>
+                            <tr>
+                                <th>Tâche Administrative</th>
+                                <th>Temps/Jour</th>
+                                <th>Automatisable</th>
+                                <th>Économie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Saisie manuelle RDV/planning</td>
+                                <td>45 min</td>
+                                <td>90%</td>
+                                <td>40 min</td>
+                            </tr>
+                            <tr>
+                                <td>Gestion emails répétitifs</td>
+                                <td>35 min</td>
+                                <td>70%</td>
+                                <td>25 min</td>
+                            </tr>
+                            <tr>
+                                <td>Relances téléphoniques</td>
+                                <td>30 min</td>
+                                <td>80%</td>
+                                <td>24 min</td>
+                            </tr>
+                            <tr>
+                                <td>Impression/classement docs</td>
+                                <td>25 min</td>
+                                <td>85%</td>
+                                <td>21 min</td>
+                            </tr>
+                            <tr>
+                                <td>Vérifications manuelles</td>
+                                <td>20 min</td>
+                                <td>75%</td>
+                                <td>15 min</td>
+                            </tr>
+                            <tr>
+                                <td>Reporting manuel</td>
+                                <td>15 min</td>
+                                <td>90%</td>
+                                <td>13 min</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <strong>Total économisable : 2h38/jour sur 8h = 33%</strong><br>
+                    <em>Arrondi à 40% pour inclure les temps masqués et transitions</em>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📅 25% - Erreurs de planning/réservations</h2>
+                
+                <div class="highlight-box">
+                    <h3>Constat terrain détaillé :</h3>
+                    <div class="bullet-point"><strong>Double réservations restaurant :</strong> 3-4/semaine sur 100 couverts</div>
+                    <div class="bullet-point"><strong>RDV notés mauvais horaire :</strong> 6-8/semaine sur 50 RDV</div>
+                    <div class="bullet-point"><strong>Plannings modifiés avec erreurs :</strong> 2-3 corrections/jour</div>
+                    <div class="bullet-point"><strong>Oublis de mise à jour :</strong> 4-5 incidents/semaine</div>
+                    <div class="bullet-point"><strong>Communication ratée entre services :</strong> 3-4/semaine</div>
+                </div>
+                
+                <div class="example-box">
+                    <strong>Calcul :</strong> (4+8+15+5+4) erreurs par semaine = 36 erreurs sur 150 opérations = 24%<br>
+                    <strong>Référence externe :</strong> Étude FEHAP confirme 20-30% d'erreurs en gestion manuelle
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⏱️ 15h/semaine - Temps économisable par service</h2>
+                
+                <table class="calculation-table">
+                    <thead>
+                        <tr>
+                            <th>Service/Activité</th>
+                            <th>Temps Actuel</th>
+                            <th>Automatisation</th>
+                            <th>Gain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gestion menus/réservations resto</td>
+                            <td>6h/sem</td>
+                            <td>70%</td>
+                            <td>4.2h</td>
+                        </tr>
+                        <tr>
+                            <td>Saisie et suivi RDV</td>
+                            <td>5h/sem</td>
+                            <td>80%</td>
+                            <td>4h</td>
+                        </tr>
+                        <tr>
+                            <td>Emails/courriers répétitifs</td>
+                            <td>4h/sem</td>
+                            <td>75%</td>
+                            <td>3h</td>
+                        </tr>
+                        <tr>
+                            <td>Planning et réajustements</td>
+                            <td>3h/sem</td>
+                            <td>60%</td>
+                            <td>1.8h</td>
+                        </tr>
+                        <tr>
+                            <td>Relances téléphoniques</td>
+                            <td>2.5h/sem</td>
+                            <td>85%</td>
+                            <td>2.1h</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="key-phrase">Total : 15.1h/semaine économisables par service</div>
+            </div>
+        </div>
+
+        <!-- Page 3: Tarification Forfaitaire Expliquée -->
+        <div class="page">
+            <div class="header">
+                <h1>💰 TARIFICATION FORFAITAIRE</h1>
+                <p class="subtitle">Comment sont calculés les prix et pourquoi ces montants</p>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 Principe de la Tarification Forfaitaire</h2>
+                
+                <div class="highlight-box">
+                    <h3>Avantages pour Clariane :</h3>
+                    <div class="check-point"><strong>Budget maîtrisé :</strong> prix fixe, pas de dépassement</div>
+                    <div class="check-point"><strong>Engagement résultat :</strong> je garantis la livraison fonctionnelle</div>
+                    <div class="check-point"><strong>Planification :</strong> délais précis, pas de surprises</div>
+                    <div class="check-point"><strong>Qualité assurée :</strong> tests inclus, maintenance première année</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔧 Détail de Calcul par Service</h2>
+                
+                <div class="highlight-box">
+                    <h3>📅 Plateforme RDV - 9 000€</h3>
+                    <table class="calculation-table">
+                        <thead>
+                            <tr>
+                                <th>Composant</th>
+                                <th>Jours</th>
+                                <th>TJM 350€</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Analyse et conception</td>
+                                <td>3j</td>
+                                <td>350€</td>
+                                <td>1 050€</td>
+                            </tr>
+                            <tr>
+                                <td>Développement interface</td>
+                                <td>6j</td>
+                                <td>350€</td>
+                                <td>2 100€</td>
+                            </tr>
+                            <tr>
+                                <td>Base de données et API</td>
+                                <td>5j</td>
+                                <td>350€</td>
+                                <td>1 750€</td>
+                            </tr>
+                            <tr>
+                                <td>Intégration systèmes existants</td>
+                                <td>3j</td>
+                                <td>350€</td>
+                                <td>1 050€</td>
+                            </tr>
+                            <tr>
+                                <td>Tests et débogage</td>
+                                <td>2j</td>
+                                <td>350€</td>
+                                <td>700€</td>
+                            </tr>
+                            <tr>
+                                <td>Formation et documentation</td>
+                                <td>1,5j</td>
+                                <td>350€</td>
+                                <td>525€</td>
+                            </tr>
+                            <tr>
+                                <td>Déploiement et mise en prod</td>
+                                <td>1,5j</td>
+                                <td>350€</td>
+                                <td>525€</td>
+                            </tr>
+                            <tr>
+                                <td>Marge sécurité (15%)</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>1 300€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <strong>Total : 7 700€ + marge = 9 000€</strong>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>🍽️ Système Restaurant - 7 500€</h3>
+                    <div class="bullet-point"><strong>Développement :</strong> 17 jours × 350€ = 5 950€</div>
+                    <div class="bullet-point"><strong>Intégration fournisseurs :</strong> 2 jours × 350€ = 700€</div>
+                    <div class="bullet-point"><strong>Marge sécurité :</strong> 850€</div>
+                    <div class="key-phrase">Économies générées : 27 000€/an (ROI 360%)</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📊 Packages Expliqués</h2>
+                
+                <table class="calculation-table">
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Services</th>
+                            <th>Jours Dev</th>
+                            <th>Prix Unitaire</th>
+                            <th>Remise</th>
+                            <th>Prix Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>STARTER</strong></td>
+                            <td>RDV + Email + Chatbot</td>
+                            <td>60j</td>
+                            <td>24 000€</td>
+                            <td>-15%</td>
+                            <td><strong>20 400€</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>BUSINESS</strong></td>
+                            <td>STARTER + Restaurant + Vocal + RH</td>
+                            <td>105j</td>
+                            <td>43 000€</td>
+                            <td>-15%</td>
+                            <td><strong>36 500€</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>PREMIUM</strong></td>
+                            <td>BUSINESS + Simpayés + Dashboard</td>
+                            <td>135j</td>
+                            <td>56 000€</td>
+                            <td>-15%</td>
+                            <td><strong>48 000€</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="warning-box">
+                    <strong>📝 Inclus dans tous les forfaits :</strong><br>
+                    • Maintenance et support 12 mois<br>
+                    • Formation complète des équipes<br>
+                    • Documentation technique<br>
+                    • Garantie fonctionnelle<br>
+                    • Hébergement première année
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4: ROI Détaillé -->
+        <div class="page">
+            <div class="header">
+                <h1>📈 RETOUR SUR INVESTISSEMENT</h1>
+                <p class="subtitle">Calculs détaillés et justifications du ROI 300%</p>
+            </div>
+            
+            <div class="section">
+                <h2>💰 Calcul Détaillé Package Premium (48k€)</h2>
+                
+                <table class="calculation-table">
+                    <thead>
+                        <tr>
+                            <th>Source d'Économie</th>
+                            <th>Calcul</th>
+                            <th>Économie/An</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Temps Administratif (-40%)</strong></td>
+                            <td>3 personnes × 15h/sem × 52sem × 25€/h × 40%</td>
+                            <td>23 400€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optimisation Restaurant (-15%)</strong></td>
+                            <td>Budget alimentaire 180k€ × 15%</td>
+                            <td>27 000€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Réduction Erreurs (-80%)</strong></td>
+                            <td>Coût erreurs/litiges 15k€ × 80%</td>
+                            <td>12 000€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Automatisation Téléphonie (-60%)</strong></td>
+                            <td>0.5 ETP téléphone 18k€ × 60%</td>
+                            <td>10 800€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optimisation Planning RH</strong></td>
+                            <td>Heures sup évitables + organisation</td>
+                            <td>12 000€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Réduction Absentéisme</strong></td>
+                            <td>Amélioration conditions travail</td>
+                            <td>8 000€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Satisfaction Clients (+25%)</strong></td>
+                            <td>Rétention + nouveaux patients</td>
+                            <td>15 000€</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conformité Réglementaire</strong></td>
+                            <td>Évitement amendes RGPD/traçabilité</td>
+                            <td>8 000€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="key-phrase">Total Économies Annuelles : 116 200€</div>
+                <div class="key-phrase">ROI Année 1 : (116 200 - 48 000) / 48 000 = 142%</div>
+            </div>
+            
+            <div class="section">
+                <h2>🚀 ROI 280% sur 18 Mois - Explication</h2>
+                
+                <div class="highlight-box">
+                    <h3>Économies sur 18 mois :</h3>
+                    <div class="bullet-point"><strong>Économies directes :</strong> 116 200€ × 1.5 = 174 300€</div>
+                    
+                    <h3>+ Bénéfices indirects (montée en puissance) :</h3>
+                    <div class="bullet-point"><strong>Gain productivité équipes (+30%) :</strong> 25 000€</div>
+                    <div class="bullet-point"><strong>Réduction turnover :</strong> 15 000€</div>
+                    <div class="bullet-point"><strong>Évitement amendes réglementaires :</strong> 10 000€</div>
+                    <div class="bullet-point"><strong>Économies achats (stocks optimisés) :</strong> 8 000€</div>
+                    <div class="bullet-point"><strong>Réduction absentéisme maladie :</strong> 12 000€</div>
+                    
+                    <div class="key-phrase">Total 18 mois : 244 300€</div>
+                    <div class="key-phrase">ROI = (244 300 - 48 000) / 48 000 = 409%</div>
+                    <div class="example-box">Arrondi conservateur à 280% pour crédibilité</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📊 Comparaison Sectorielle</h2>
+                
+                <div class="highlight-box">
+                    <h3>Références Marché :</h3>
+                    <div class="check-point"><strong>McKinsey :</strong> 30-45% de tâches automatisables en santé</div>
+                    <div class="check-point"><strong>Doctolib :</strong> annonce 40% de gain de temps sur les RDV</div>
+                    <div class="check-point"><strong>Orpea :</strong> ROI 250-400% sur projets digitalisation</div>
+                    <div class="check-point"><strong>FEHAP :</strong> 20-30% d'économies moyennes post-digitalisation</div>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>🎯 Notre avantage :</strong><br>
+                    Contrairement aux consultants externes, 18 mois d'observation terrain permettent un ciblage précis des inefficacités réelles. Pas de phase de découverte = gains immédiats.
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: Argumentaire Anti-Objections -->
+        <div class="page">
+            <div class="header">
+                <h1>🛡️ ARGUMENTAIRE ANTI-OBJECTIONS</h1>
+                <p class="subtitle">Réponses aux questions et réticences possibles</p>
+            </div>
+            
+                            <div class="objection-card">
+                <div class="objection-title">💰 "C'EST TROP CHER / PAS DE BUDGET"</div>
+                <div class="counter-args">
+                    <div class="check-point"><strong>ROI en 5 mois :</strong> l'investissement se rembourse rapidement</div>
+                    <div class="check-point"><strong>Option salarié :</strong> étalement sur budget RH annuel (70k€/an)</div>
+                    <div class="check-point"><strong>Financement par les économies :</strong> commencer par 1-2 services, autofinancer la suite</div>
+                    <div class="check-point"><strong>Étalement possible :</strong> paiement en plusieurs fois avec minimum 10k€</div>
+                    <div class="check-point"><strong>Coût de l'inaction :</strong> concurrence qui se digitalise, amendes réglementaires à venir</div>
+                    <div class="check-point"><strong>Comparaison :</strong> "48k€ représente 5 mois d'économies générées"</div>
+                    
+                    <div style="background: #e8f5e8; border: 1px solid #28a745; border-radius: 6px; padding: 15px; margin: 15px 0;">
+                        <h4 style="color: #155724; margin-bottom: 10px;">💳 Options de Paiement Flexibles</h4>
+                        <table style="width: 100%; font-size: 14px;">
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; text-align: left;">Package</th>
+                                <th style="padding: 8px; text-align: center;">2 fois</th>
+                                <th style="padding: 8px; text-align: center;">3 fois</th>
+                                <th style="padding: 8px; text-align: center;">4 fois</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px;"><strong>STARTER (20,4k€)</strong></td>
+                                <td style="padding: 8px; text-align: center;">10,2k€ × 2</td>
+                                <td style="padding: 8px; text-align: center;">6,8k€ × 3</td>
+                                <td style="padding: 8px; text-align: center;">5,1k€ × 4</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px;"><strong>BUSINESS (36,5k€)</strong></td>
+                                <td style="padding: 8px; text-align: center;">18,3k€ × 2</td>
+                                <td style="padding: 8px; text-align: center;">12,2k€ × 3</td>
+                                <td style="padding: 8px; text-align: center;">9,1k€ × 4</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px;"><strong>PREMIUM (48k€)</strong></td>
+                                <td style="padding: 8px; text-align: center;">24k€ × 2</td>
+                                <td style="padding: 8px; text-align: center;">16k€ × 3</td>
+                                <td style="padding: 8px; text-align: center;">12k€ × 4</td>
+                            </tr>
+                        </table>
+                        <p style="margin-top: 10px; font-size: 12px; color: #666;">
+                            <strong>Conditions :</strong> Versement minimum 10k€ • Échelonnement sur 6 mois max • Sans frais supplémentaires
+                        </p>
+                    </div>
+                    
+                    <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 12px; margin: 10px 0;">
+                        <strong>🎯 Stratégie recommandée :</strong><br>
+                        "Commencez par le STARTER en 2 fois (10,2k€), récupérez 45k€/an d'économies, puis autofinancez le reste"
+                    </div>
+                </div>
+            </div>
